@@ -1,29 +1,30 @@
-数据集
+Dataset
 ```bash
 链接: https://pan.baidu.com/s/11PXjoCrTwjGibd9Vc1aI4g?pwd=1234 提取码: 1234
 ```
-运行代码， 需要你选择想要的模型  下面注释的就模型yaml文件
+Run the code, and you need to select the model you want. The commented sections refer to the model's YAML file and the training file.
 train文件
 ```bash
 from ultralytics import YOLO
 
 if __name__ == '__main__':
 
-    model = YOLO(r'ltralytics\cfg\models\v8\yolov8.yaml')    # 1	Original
-    # yolov8mbgcsa2.yaml   5	Mamba GCSA
-    # yolov8gcsamb.yaml    6	Mamba GGCA1
-    # yolov8ggca.yaml    2	  GGCA
-    # yolov8gcsa.yaml    4	  GCSA
+    model = YOLO(r'ltralytics\cfg\models\v8\yolov8.yaml')    # 	Original
+    # yolov8mbgcsa2.yaml   	Mamba GCSA
+    # yolov8gcsamb.yaml    	Mamba GGCA
+    # yolov8ggca.yaml    	  GGCA
+    # yolov8gcsa.yaml   	  GCSA
 
-    # 模型训练
-    model.train(data=r"data.yaml",  # 训练数据配置文件
+
+    model.train(data=r"data.yaml",  
                 epochs=3, imgsz=640, batch=1, workers=2)
 ```
 
-但是数据集位置还要自己修改
+But you need to modify the dataset location manually.
 
-txt.py 作用
-可以测试模型各个参数
+The role of txt.py is to test various model parameters
+
+display dataset categories.
 
 数据集展示类别
 ```bash
