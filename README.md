@@ -3,7 +3,7 @@ Dataset
 链接: https://pan.baidu.com/s/11PXjoCrTwjGibd9Vc1aI4g?pwd=1234 提取码: 1234
 ```
 Run the code, and you need to select the model you want. The commented sections refer to the model's YAML file and the training file.
-train文件
+train
 ```bash
 from ultralytics import YOLO
 
@@ -26,7 +26,6 @@ The role of txt.py is to test various model parameters
 
 display dataset categories.
 
-数据集展示类别
 ```bash
   0: Spotted chela
   1: Wax cicada
